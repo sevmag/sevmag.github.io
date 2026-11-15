@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Severin Magel</title>
+  <meta name="description" content="Personal website of Severin Magel: research, publications and contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+  <style>
+    :root {
+      --background: oklch(0.985 0.004 85);
+      --foreground: oklch(0.2 0.01 60);
+      --muted-foreground: oklch(0.52 0.01 60);
+      --accent: oklch(0.5 0.12 35);
+      --border: oklch(0.9 0.006 85);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: "Space Mono", ui-monospace, monospace;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    ul { list-style: none; }
+    .muted { color: var(--muted-foreground); }
+    .small { font-size: 0.875rem; }
+    strong { font-weight: 700; }
+    .link {
+      text-decoration: underline; text-underline-offset: 4px;
+      text-decoration-color: var(--border);
+      transition: color .2s, text-decoration-color .2s;
+    }
+    .link:hover, .link.active { color: var(--accent); text-decoration-color: var(--accent); }
+
+    nav { position: fixed; right: 1.5rem; top: 1.5rem; z-index: 10; display: flex; gap: 1.25rem; font-size: 0.875rem; }
+    main { max-width: 42rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+    header { position: relative; width: 100%; padding: 12rem 0 1.5rem; overflow: hidden; }
+    header .inner { position: relative; max-width: 42rem; margin: 0 auto; padding: 0 1.5rem; }
+    /* Banner image: spans the full width; shifted vertically so the thick
+       diagonal track passes to the right of the name instead of through it. */
+    header img {
+      position: absolute; left: 0; top: calc(265px - 36.3vw);
+      width: 100%; height: auto; max-width: none;
+      opacity: 0.6; filter: grayscale(1);
+    }
+    /* Tablets: keep the image at a fixed size so it still covers the banner. */
+    @media (max-width: 760px) {
+      header img { width: 840px; left: -50px; top: -40px; }
+    }
+    /* Phones: pin the image's bottom edge to the banner and show a clean
+       patch of the lower-left area behind the name. */
+    @media (max-width: 620px) {
+      header img { width: 1100px; left: -175px; top: auto; bottom: 0; }
+    }
+    h1 { font-size: 2.25rem; font-weight: 400; letter-spacing: -0.025em; line-height: 1.1; }
+    header p { margin-top: 0.5rem; }
+
+    section { margin-top: 4rem; }
+    section.bio { margin-top: 3.5rem; line-height: 1.625; }
+    section.bio p + p { margin-top: 1rem; }
+    h2 {
+      font-size: 0.75rem; font-weight: 400; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted-foreground);
+    }
+    section ul { margin-top: 1.5rem; }
+    .pubs li { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1rem; }
+    .pubs li + li { margin-top: 1.5rem; }
+    .pubs .year { font-variant-numeric: tabular-nums; }
+    .pubs .title { font-size: 1.125rem; line-height: 1.375; }
+    .repos li + li { margin-top: 1rem; }
+    .contact { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+    footer { margin-top: 6rem; }
+
+    @media (min-width: 640px) {
+      main { padding-bottom: 7rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="link active" href="index.html">Home</a>
+    <a class="link" href="cv.pdf">CV</a>
+  </nav>
+
+  <header>
+    <img src="stills/bubble-hd6b050.jpg" alt="Bubble chamber photograph of particle tracks">
+    <div class="inner">
+      <h1>Severin Magel</h1>
+      <p class="muted">master's student · TUM | Harvard</p>
+    </div>
+  </header>
+ 
+  <main>
+
+    <section class="bio">
+      <p>
+        I am an AI researcher and a general curious person interested in most things quantitative. Be that in my field of training astro and particle physics, in my day to day area of machine learning, or in other areas like computational neuroscience, game theory, economics.
+      </p>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="year muted">2026</span>
+          <div>
+            <p class="title"><a class="link" href="https://arxiv.org/abs/2610.30894">CURTAIN: Towards a Foundation Model for Neutrino Telescopes
+            </a></p>
+            <p class="small muted"><strong>S. Magel</strong>, F. J. Yu, C. A. Argüelles - NeurIPS RPS 2026</p>
+          </div>
+        </li>
+        <li>
+          <span class="year muted">2026</span>
+          <div>
+            <p class="title"><a class="link" href="https://arxiv.org/abs/2610.26299">Characterization of the R14374-10 photomultiplier tube for the Pacific Ocean Neutrino Experiment</a></p>
+            <p class="small muted"> P-ONE Collaboration (incl. <strong>S. Magel</strong>) - arXiv</p>
+          </div>
+        </li>
+        <li>
+          <span class="year muted">2026</span>
+          <div>
+            <p class="title"><a class="link" href="https://www.ph.nat.tum.de/fileadmin/w00bya/cosmic-particles/Thesis/master_thesis_severin_magel.pdf">Where Tracks Begin: Deep Learning–Based Starting Track Event Selection in IceCube</a></p>
+            <p class="small muted"> <strong>S. Magel </strong> - Master's Thesis</p>
+          </div>
+        </li>
+        <li>
+          <span class="year muted">2022</span>
+          <div>
+            <p class="title"><a class="link" href="https://github.com/sevmag/bachelor-thesis-pdf/blob/main/severin_magel_bachelor_thesis.pdf">"Kissing Instability" in Very Low-Mass Stars: Physical and Numerical Uncertainties</a></p>
+            <p class="small muted"> <strong>S. Magel </strong> - Bachelor's Thesis</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Open Source</h2>
+      <ul class="repos">
+        <li>
+          <a class="link" href="https://github.com/graphnet-team/graphnet">GraphNeT</a>
+          <p class="small muted">100+ stars<br>maintainer since 2024<br>
+            the standard ML framework in neutrino telescopes and adjacent fields</p>
+        </li>
+        <li>
+          <a class="link" href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a>
+          <p class="small muted">25+ stars<br>contributor since 2026<br>
+          open source particle simulation framework for neutrino telescopes</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul class="contact">
+        <li><a class="link" href="https://scholar.google.com/citations?user=Rh3qeCYAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a class="link" href="https://github.com/sevmag">GitHub</a></li>
+        <li><a class="link" href="https://www.linkedin.com/in/severin-magel/">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <footer class="small muted">© 2026 Severin Magel</footer>
+  </main>
+</body>
+</html>

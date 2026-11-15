@@ -1,0 +1,6 @@
+# Only the site itself is published: index.html, cv.pdf and the banner image.
+.DS_Store
+/videos/
+/minimal-research-profile/
+/stills/*
+!/stills/bubble-hd6b050.jpg
